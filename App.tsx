@@ -1,118 +1,52 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import FontPage from './src/Functions/FontPage';
+import SecondPage from './src/Functions/SecondPage';
+import ThirdPage from './src/Functions/ThirdPage';
+import RegisterScreen from './src/Functions/RegisterScreen';
+import RegistrationSuccessful from './src/Functions/RegistrationSuccessful';
+import LoginScreen from './src/Functions/LoginScreen';
+import LoginSuccessful from './src/Functions/LoginSuccessful';
+import PostJobs from './src/Functions/PostJobs';
+import JobCategory from './src/Functions/JobCategory';
+import PostJobScreen from './src/Functions/PostJobScreen';
+import Ratings from './src/Functions/Ratings';
+import RatingSuccessful from './src/Functions/RatingSuccessful';
+import Home from './src/Functions/Home';
+import ProfileScreen from './src/Functions/ProfileScreen';
+import EditProfileScreen from './src/Functions/EditProfileScreen';
+import ChangePasswordScreen from './src/Functions/ChangePasswordScreen';
+import ViewJobsScreen from './src/Functions/ViewJobsScreen';
+import AppNavigation from './src/Navigation/AppNavigation';
+import MobileNoVerification from './src/Functions/MobileNoVerification';
+import EmailVerificationScreen from './src/Functions/EmailVerificationScreen';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+  
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    // <FontPage/>
+    // <SecondPage/>
+    // <ThirdPage/>
+    // <RegisterScreen/>
+    // <RegistrationSuccessful/>
+    // <LoginScreen/>
+    // <LoginSuccessful/>
+    // <PostJobs/>
+    // <JobCategory/>
+    // <PostJobScreen/>
+    // <Ratings/>
+    // <RatingSuccessful/>
+    // <Home/>
+    // <ProfileScreen/>
+    // <EditProfileScreen/>
+    // <ChangePasswordScreen/>
+    // <ViewJobsScreen/>
+    // <MobileNoVerification/>
+    // <EmailVerificationScreen/>
+     <AppNavigation/>
+
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
